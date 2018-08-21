@@ -5,7 +5,13 @@ export default class Post extends React.Component {
     super();
     this.state = {};
   }
+
+  componentDidMount() {
+    this.setState({ title: 'First post from post.js' });
+  }
+
   render() {
-    return <div>hi alex from the post.js file</div>;
+    let { title } = this.state;
+    return <div>This is the {title}</div>;
   }
 }
