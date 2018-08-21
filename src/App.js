@@ -4,13 +4,15 @@ import Blog from './blog';
 import TheArray from './render-array';
 import Delayed from './delayed';
 import Tabs from './fun/tabs';
-import Post from './fun/post';
+import Post from './fun/load-post';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Post description="some stuff for zach" />
+        {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
+        <Post id={4} />
+        <Post id={6} />
         {/* <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
