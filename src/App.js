@@ -6,6 +6,10 @@ import Delayed from './delayed';
 import Tabs from './fun/tabs';
 import Post from './fun/load-post';
 
+//WEDNESDAY ASSIGNMENT!:
+//Use the same API but call the 'posts' endpoint and render a single Post component for every post there
+//extra credit: get the actual user name to display for each post as well, not just the user ID
+
 class App extends Component {
   render() {
     return (
