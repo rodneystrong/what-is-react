@@ -8,9 +8,7 @@ export default class Post extends React.Component {
 
   async componentDidMount() {
     let { id } = this.props;
-    let response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${id}`
-    );
+    let response = await fetch(`https://jsonplaceholder.typicode.com/posts/`);
 
     console.log('this is your fucking response: ', response);
 
@@ -26,7 +24,9 @@ export default class Post extends React.Component {
   render() {
     let { title, body } = this.state;
 
-    console.log(this.state);
+    console.log('this is my state ', this.state);
+
+    console.log('this is my title ', this.state[0]);
 
     return (
       <div>

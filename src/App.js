@@ -4,7 +4,7 @@ import Blog from './blog';
 import TheArray from './render-array';
 import Delayed from './delayed';
 import Tabs from './fun/tabs';
-import Post from './fun/load-post';
+import Post from './fun/single-post';
 
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
