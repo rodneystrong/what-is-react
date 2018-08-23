@@ -4,7 +4,8 @@ import Blog from './blog';
 import TheArray from './render-array';
 import Delayed from './delayed';
 import Tabs from './fun/tabs';
-import Post from './fun/single-post';
+import Post from './fun/post';
+import Posts from './fun/posts';
 
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
@@ -15,8 +16,8 @@ class App extends Component {
     return (
       <div className="App">
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
-        <Post id={4} />
-        <Post id={6} />
+        <Posts />
+
         {/* <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>

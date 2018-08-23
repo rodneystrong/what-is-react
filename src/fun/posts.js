@@ -1,6 +1,7 @@
 import React from 'react';
+import Post from './post';
 
-export default class Post extends React.Component {
+export default class Posts extends React.Component {
   constructor() {
     super();
     this.state = {};
@@ -34,14 +35,9 @@ export default class Post extends React.Component {
 
     return (
       <div>
-        {posts.map(post => {
-          return (
-            <div>
-              <h1>{post.title}</h1>
-              <p>{post.body}</p>
-            </div>
-          );
-        })}
+        {posts.map(postItem => (
+          <Post postProp={postItem} />
+        ))}
       </div>
     );
   }

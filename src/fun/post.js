@@ -11,14 +11,11 @@ export default class Post extends React.Component {
   }
 
   render() {
-    console.log('show me ', this);
-    let { title } = this.state;
-    console.log('fuck your couch and ', this);
-    let { description } = this.props;
+    let { postProp } = this.props;
     return (
       <div>
-        <h1>This is the {title}</h1>
-        <p>This is the {description}</p>
+        <h1>This is the {postProp.title}</h1>
+        <p>This is the {postProp.body}</p>
       </div>
     );
   }
