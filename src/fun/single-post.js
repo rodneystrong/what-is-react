@@ -26,7 +26,9 @@ export default class Post extends React.Component {
 
     console.log('this is my state ', this.state);
 
-    console.log('this is my title ', this.state[0]);
+    console.log('this is my first array item ', this.state[0]);
+
+    console.log('this is my title ', title);
 
     return (
       <div>
