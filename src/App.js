@@ -3,10 +3,11 @@ import { blog } from './blog';
 import Blog from './blog';
 import TheArray from './render-array';
 import Delayed from './delayed';
+import { Header } from './shared/header';
 import Tabs from './fun/tabs';
 import Post from './fun/post';
 import Posts from './fun/posts';
-
+import { Footer } from './shared/footer';
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
 //extra credit: get the actual user name to display for each post as well, not just the user ID
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
         <Posts />
 
@@ -33,6 +35,7 @@ class App extends Component {
         <TheArray />
 
         <Delayed /> */}
+        <Footer />
       </div>
     );
   }

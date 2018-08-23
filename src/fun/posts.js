@@ -1,6 +1,5 @@
 import React from 'react';
 import Post from './post';
-import { Header } from '../shared/header';
 
 export default class Posts extends React.Component {
   constructor() {
@@ -36,7 +35,6 @@ export default class Posts extends React.Component {
 
     return (
       <div>
-        <Header />
         {posts.map(postItem => (
           <Post postProp={postItem} />
         ))}
