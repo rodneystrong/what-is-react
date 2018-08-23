@@ -14,26 +14,34 @@ export default class Post extends React.Component {
 
     console.log('ma fuckin status ', response.status);
 
-    let json = await response.json();
+    let posts = await response.json();
 
-    console.log('the fuckin json is ', json.title);
+    console.log('the fuckin posts are ', posts);
 
-    this.setState(json);
+    this.setState({ posts });
   }
 
   render() {
-    let { title, body } = this.state;
+    let { posts } = this.state;
 
-    console.log('this is my state ', this.state);
+    if (!posts) return null;
 
-    console.log('this is my first array item ', this.state[0]);
+    console.log('this is my state ', posts);
 
-    console.log('this is my title ', title);
+    console.log('this is my first array item ', posts[0]);
+
+    console.log('this is my title ', posts[0].title);
 
     return (
       <div>
-        <h1>This is the {title}</h1>
-        <p>This is the {body}</p>
+        {posts.map(post => {
+          return (
+            <div>
+              <h1>{post.title}</h1>
+              <p>{post.body}</p>
+            </div>
+          );
+        })}
       </div>
     );
   }
