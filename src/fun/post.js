@@ -14,7 +14,7 @@ export default class Post extends React.Component {
     let { postProp } = this.props;
     return (
       <div>
-        <h1>This is the {postProp.title}</h1>
+        <h2>This is the {postProp.title}</h2>
         <p>This is the {postProp.body}</p>
       </div>
     );
