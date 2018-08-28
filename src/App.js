@@ -6,6 +6,7 @@ import Delayed from './delayed';
 import { Header } from './shared/header';
 import Tabs from './fun/tabs';
 import Post from './fun/post';
+import Home from './pages/home';
 import Posts from './fun/posts';
 import { Footer } from './shared/footer';
 //WEDNESDAY ASSIGNMENT!:
@@ -19,11 +20,13 @@ import { Footer } from './shared/footer';
 class App extends Component {
   render() {
     console.log(window.location);
+    let isHome = window.location.pathname === '/';
+    console.log(isHome);
     return (
       <div className="App">
         <Header titleProp="another prop" />
+        {isHome ? <Home /> : <Posts />}
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
-        <Posts />
 
         {/* <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
