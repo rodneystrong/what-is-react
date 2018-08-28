@@ -20,12 +20,23 @@ import { Footer } from './shared/footer';
 class App extends Component {
   render() {
     console.log(window.location);
-    let isHome = window.location.pathname === '/';
+    let theUrl = window.location.pathname;
     console.log(isHome);
     return (
       <div className="App">
         <Header titleProp="another prop" />
-        {isHome ? <Home /> : <Posts />}
+        {/*{isHome ? <Home /> : <Posts />}*/}
+        {switch (theUrl) {
+          default: 
+              <Home />;
+              break;
+          case 'posts':
+              <Posts />;
+              break; 
+          case 'about':
+              <About />;
+          }
+        }
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
 
         {/* <header className="App-header">

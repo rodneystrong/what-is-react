@@ -7,7 +7,7 @@ export class Header extends React.Component {
     return (
       <header>
         <h1>
-          This h1 goes at the top of every page and this is your title prop:{' '}
+          This h1 goes at the top of every page. The page you're on is:{' '}
           {titleProp}
         </h1>
       </header>
