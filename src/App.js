@@ -18,9 +18,10 @@ import { Footer } from './shared/footer';
 
 class App extends Component {
   render() {
+    console.log(window.location);
     return (
       <div className="App">
-        <Header />
+        <Header titleProp="another prop" />
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
         <Posts />
 
