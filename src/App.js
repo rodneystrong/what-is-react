@@ -25,7 +25,7 @@ class App extends Component {
     console.log(theUrl);
     return (
       <div className="App">
-        <Header titleProp="another prop" />
+        <Header titleProp={theUrl === '/' ? 'Home' : theUrl} />
         <Route path="/" renderedComponent={<Home />} />
         <Route path="/posts" renderedComponent={<Posts />} />
         <Route path="/about" />
