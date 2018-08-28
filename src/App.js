@@ -9,6 +9,7 @@ import Post from './fun/post';
 import Home from './pages/home';
 import Posts from './fun/posts';
 import { Footer } from './shared/footer';
+import Route from './shared/route';
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
 //extra credit: get the actual user name to display for each post as well, not just the user ID
@@ -21,12 +22,15 @@ class App extends Component {
   render() {
     console.log(window.location);
     let theUrl = window.location.pathname;
-    console.log(isHome);
+    console.log(theUrl);
     return (
       <div className="App">
         <Header titleProp="another prop" />
+        <Route path="/" renderedComponent={<Home />} />
+        <Route path="/posts" renderedComponent={<Posts />} />
+        <Route path="/about" />
         {/*{isHome ? <Home /> : <Posts />}*/}
-        {switch (theUrl) {
+        {/* {switch (theUrl) {
           default: 
               <Home />;
               break;
@@ -36,7 +40,8 @@ class App extends Component {
           case 'about':
               <About />;
           }
-        }
+        } */}
+
         {/* In the code below, you put the number 4 and 6 in curly braces cause you don't want it to be a string, but a number value. */}
 
         {/* <header className="App-header">

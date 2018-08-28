@@ -35,6 +35,9 @@ export default class Posts extends React.Component {
 
     return (
       <div>
+        <p>
+          If you wanna go back home, <a href="/">click here</a>
+        </p>
         {posts.map(postItem => (
           <Post postProp={postItem} />
         ))}
