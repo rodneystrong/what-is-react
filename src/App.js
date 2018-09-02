@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Home from './pages';
+import Header from './shared/header';
+//import Home from './pages';
 
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
@@ -14,7 +15,11 @@ class App extends Component {
     console.log(window.location);
     let theUrl = window.location.pathname;
     console.log(theUrl);
-    return <div className="App" />;
+    return (
+      <div className="App">
+        <Header />
+      </div>
+    );
   }
 }
 
