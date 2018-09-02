@@ -9,6 +9,8 @@ export default class Blog extends React.Component {
   async componentDidMount() {
     let response = await fetch('https://jsonplaceholder.typicode.com/posts');
     console.log('the response is ', response);
+    //gotta jsonify the response
+    let postsJson = await response.json();
   }
 
   render() {
