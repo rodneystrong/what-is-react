@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './pages';
 
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
