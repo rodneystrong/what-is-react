@@ -11,9 +11,21 @@ export default class Blog extends React.Component {
     console.log('the response is ', response);
     //gotta jsonify the response
     let postsJson = await response.json();
+
+    console.log('the JSONed data is ', postsJson);
+
+    this.setState({postsJson})
   }
 
   render() {
-    return <h2>Blog titles and descriptions</h2>;
+    let {postsJson} = this.state;
+    if(!postsJson) return null;
+
+    return (
+      <h2>Blog titles and descriptions</h2>
+      {postsJson.map(postItem => {
+        return <h2>{postItem.title}</h2>
+      })}
+    );
   }
 }
