@@ -14,18 +14,20 @@ export default class Blog extends React.Component {
 
     console.log('the JSONed data is ', postsJson);
 
-    this.setState({postsJson})
+    this.setState({ postsJson });
   }
 
   render() {
-    let {postsJson} = this.state;
-    if(!postsJson) return null;
+    let { postsJson } = this.state;
+    if (!postsJson) return null;
 
     return (
-      <h2>Blog titles and descriptions</h2>
-      {postsJson.map(postItem => {
-        return <h2>{postItem.title}</h2>
-      })}
+      <React.Fragment>
+        <h2>Blog titles and descriptions</h2>
+        {postsJson.map(postItem => {
+          return <h2>{postItem.title}</h2>;
+        })}
+      </React.Fragment>
     );
   }
 }
