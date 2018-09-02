@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './shared/header';
-//import Home from './pages';
+import Footer from './shared/footer';
+import Home from './pages/home';
 
 //WEDNESDAY ASSIGNMENT!:
 //Use the same API but call the 'posts' endpoint and render a single Post component for every post there
@@ -18,6 +19,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Home />
+        <Footer />
       </div>
     );
   }
