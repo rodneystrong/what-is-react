@@ -25,7 +25,12 @@ export default class Blog extends React.Component {
       <React.Fragment>
         <h2>Blog titles and descriptions</h2>
         {postsJson.map(postItem => {
-          return <h2>{postItem.title}</h2>;
+          return (
+            <React.Fragment>
+              <h2>{postItem.title}</h2>
+              <p>{postItem.body}</p>
+            </React.Fragment>
+          );
         })}
       </React.Fragment>
     );
