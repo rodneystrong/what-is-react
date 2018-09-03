@@ -5,6 +5,7 @@ export default class Header extends React.Component {
     return (
       <header>
         <h1>This goes at the top of every page. Page title: </h1>
+        <p>{this.props.testProp}</p>
       </header>
     );
   }

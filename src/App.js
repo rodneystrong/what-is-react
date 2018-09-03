@@ -19,7 +19,7 @@ class App extends Component {
     console.log(theUrl);
     return (
       <div className="App">
-        <Header />
+        <Header testProp="test prop alex" />
         <Home />
         <Blog />
         <Footer />
