@@ -22,17 +22,17 @@ export default class Blog extends React.Component {
     if (!postsJson) return null;
 
     return (
-      <React.Fragment>
+      <div className="blog-section">
         <h2>Blog titles and descriptions</h2>
         {postsJson.map(postItem => {
           return (
-            <React.Fragment>
+            <div className="blog-snip">
               <h2>{postItem.title}</h2>
               <p>{postItem.body}</p>
-            </React.Fragment>
+            </div>
           );
         })}
-      </React.Fragment>
+      </div>
     );
   }
 }
