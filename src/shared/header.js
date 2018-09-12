@@ -1,14 +1,12 @@
 import React from 'react';
 
-export default class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <h1>
-          This goes at the top of every page. Page title: {this.props.titleProp}
-        </h1>
-        <p>{this.props.testProp}</p>
-      </header>
-    );
-  }
-}
+const Header = ({ titleProp, testProp }) => {
+  return (
+    <header>
+      <h1>This goes at the top of every page. Page title: {titleProp}</h1>
+      <p>{testProp}</p>
+    </header>
+  );
+};
+
+export default Header;
