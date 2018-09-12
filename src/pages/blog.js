@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../shared/input';
 
 export default class Blog extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ export default class Blog extends React.Component {
 
     return (
       <div className="blog-section">
+        <Input />
         <h2>Blog titles and descriptions</h2>
         {postsJson.map(postItem => {
           return (
