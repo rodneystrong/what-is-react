@@ -19,7 +19,7 @@ export default class Inputtest extends React.Component {
         />
         <div
           className="button"
-          onClick={() => this.setState({ searchInput: 'sure thing' })}
+          onClick={() => this.setState({ searchInput: '' })}
         >
           click me yea
         </div>
