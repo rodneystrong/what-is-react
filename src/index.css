@@ -16,3 +16,8 @@ footer {
 .blog-snip {
   text-align: left;
 }
+
+.button {
+  background: #ccc;
+  padding: 10px;
+}
