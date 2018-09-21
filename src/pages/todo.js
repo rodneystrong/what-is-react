@@ -1,22 +1,24 @@
 import React from 'react';
 
-export default Todo extends React.Component {
+export default class Todo extends React.Component {
   constructor() {
     super();
-    this.state = {inputValue: ''};
+    this.state = { inputValue: '' };
   }
 
   render() {
-    return(
+    let { inputValue } = this.state;
+    return (
       <div className="todo-input">
-        <input 
+        <input
           name="addField"
           value={inputValue}
           onChange={e => {
             console.log(e.target.value);
+            this.setState({ inputValue: e.target.value });
           }}
         />
       </div>
-    )
+    );
   }
 }
